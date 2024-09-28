@@ -1,101 +1,128 @@
-import Image from "next/image";
+"use client";
+
+import Navbar from "./components/Navbar";
+import { motion } from "framer-motion";
+import ProjectCard from "./components/ProjectCard"; 
+import ServiceCard from "./components/ServiceCard"; 
+import { faCode, faMobileAlt, faPaintBrush, faClipboard } from "@fortawesome/free-solid-svg-icons"; 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import TeamMemberCard from "./components/MemberCard";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <Navbar />
+      <div className="flex flex-col items-center h-screen bg-gray-100 pt-48 px-4">
+        <motion.h1
+          className="text-5xl md:text-9xl font-bold text-black leading-none text-center"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          RADIKLE<sup className="text-xl md:text-4xl">TM</sup>
+        </motion.h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className="flex justify-center space-x-4 mt-2 text-base font-medium text-black">
+          <span>Development</span>
+          <span>&bull;</span>
+          <span>Design</span>
+          <span>&bull;</span>
+          <span>Branding</span>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+
+        <div className="absolute bottom-32 w-full flex justify-between px-10">
+          <p className="text-lg text-gray-700 max-w-md text-center">
+            We are a development agency specializing in building modern, robust, and scalable applications for businesses of all sizes.
+          </p>
+        </div>
+      </div>
+
+      <section className="bg-white py-16 px-4">
+        <h2 className="text-4xl font-bold text-center text-black mb-4">
+          Deployed Projects
+        </h2>
+        <p className="text-lg text-center text-gray-600 mb-12">
+          Here are some of our latest projects we've successfully delivered.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 px-10">
+          <ProjectCard
+            imageSrc="/assets/rsec.png" 
+            title="Ricoche SEC"
+            subtitle="Vulnerable Website, originally designed as a Cybersecurity Knowledge Platform "
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          <ProjectCard
+            imageSrc="/assets/gg.png" 
+            title="Gadget Galaxy"
+            subtitle="Responsive and fully functional e-commerce website with Stripe Payment Gateway and Delivery Tracking"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+          {/* <ProjectCard
+            imageSrc="/project3.jpg" 
+            title="Manasatarang"
+            subtitle="A mental health support platform designed specifically for students and working professionals"
+          /> */}
+        </div>
+      </section>
+
+      <section className="bg-gray-100 py-16 px-4">
+        <h2 className="text-4xl font-bold text-center text-black mb-4">
+          Services Provided
+        </h2>
+        <p className="text-lg text-center text-gray-600 mb-12">
+          We offer a variety of services to meet your needs.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-5 px-10">
+          <ServiceCard icon={faCode} title="Web Development" />
+          <ServiceCard icon={faMobileAlt} title="App Development" />
+          <ServiceCard icon={faPaintBrush} title="UI/UX Designing" />
+          <ServiceCard icon={faClipboard} title="Graphic Designing" />
+        </div>
+      </section>
+
+      <section className="bg-white py-16 px-4">
+        <h2 className="text-4xl font-bold text-center text-black mb-4">
+          Meet Our Team
+        </h2>
+        <p className="text-lg text-center text-gray-600 mb-12">
+          A group of passionate individuals working together to deliver excellence.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 px-10">
+          <TeamMemberCard
+            photo="/assets/rahul.jpg" // Replace with your image path
+            name="Rahul Dhanak"
+            roles={["Frontend Developer", "Flutter Developer", "UI/UX Designer", "Graphic Designer"]}
+            linkedin="https://www.linkedin.com/in/rahul-dhanak//"
+            github="https://github.com/rahuldhanak11"
+            instagram="https://instagram.com/rahuldhanak11"
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <TeamMemberCard
+            photo="/assets/durgeshdp.jpeg" // Replace with your image path
+            name="Durgesh Dubey"
+            roles={["Backend Developer", "Cloud Developer", "Public Relations"]}
+            linkedin="https://www.linkedin.com/in/durgesh-dubey18/"
+            github="https://github.com/Durgesh-05"
+            instagram="https://instagram.com/wsr_durgesh"
+          />
+          <TeamMemberCard
+            photo="/assets/" // Replace with your image path
+            name="Arya Gami"
+            roles={["Frontend Developer", "Flutter Developer", "UI/UX Designer", "Graphic Designer"]}
+            linkedin="https://www.linkedin.com/in/"
+            github="https://github.com/michaeljohnson"
+            instagram="https://www.instagram.com/arya_14_3"
+          />
+          <TeamMemberCard
+            photo="/assets/khush.jpg"
+            name="Khush Chheda"
+            roles={["Cloud Developer", "Public Relations"]}
+            linkedin="https://www.linkedin.com/in/"
+            github="https://github.com/michaeljohnson"
+            instagram="https://www.instagram.com/arya_14_3"
+          />
+        </div>
+      </section>
+    </>
   );
 }

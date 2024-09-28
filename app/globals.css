@@ -9,15 +9,18 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #ffffff;
     --foreground: #ededed;
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins), sans-serif; /* Use Poppins for the body */
+}
+
+/* Add styles for headings or other elements if needed */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-poppins), sans-serif; /* Ensure headings also use Poppins */
 }
 
 @layer utilities {
