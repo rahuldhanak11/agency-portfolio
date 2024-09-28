@@ -7,6 +7,7 @@ import ServiceCard from "./components/ServiceCard";
 import { faCode, faMobileAlt, faPaintBrush, faClipboard } from "@fortawesome/free-solid-svg-icons"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TeamMemberCard from "./components/MemberCard";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -123,6 +124,8 @@ export default function Home() {
           />
         </div>
       </section>
+
+      <Footer />
     </>
   );
 }
