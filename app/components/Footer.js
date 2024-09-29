@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="pr-4">
           <h1 className="text-2xl font-bold">RADIKLE</h1>
           <p className="mt-2 text-sm">
-            We’re here to assist you with your needs. 
+            We&apos;re here to assist you with your needs. 
             <br />
             Reach out to us for any inquiries or support!
           </p>
