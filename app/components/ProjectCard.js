@@ -7,8 +7,8 @@ const ProjectCard = ({ imageSrc, title, subtitle,url }) => {
       <Image
         src={imageSrc}
         alt={title}
-        width={700}
-        height={500}
+        width={900}
+        height={700}
         className="object-cover rounded-md mb-4 w-full h-full"
       />
     </div>
