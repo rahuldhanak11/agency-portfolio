@@ -118,7 +118,6 @@ export default function Home() {
             photo="/assets/profikelight.png"
             name="Arya Gami"
             roles={["Frontend Developer", "Flutter Developer", "UI/UX Designer", "Graphic Designer"]}
-            linkedin="https://www.linkedin.com/in/"
             github="https://github.com/aryagami27"
             instagram="https://www.instagram.com/arya_14_3"
           />

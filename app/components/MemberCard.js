@@ -13,9 +13,9 @@ const TeamMemberCard = ({ photo, name, roles, linkedin, github, instagram }) => 
       <img src={photo} alt={name} className="w-32 h-32 rounded-full mb-4 object-cover" />
       <h3 className="text-lg font-semibold">{name}</h3>
       <div className="flex space-x-4 mt-2 static">
-        <a href={linkedin} target="_blank" rel="noopener noreferrer">
+        {linkedin && <a href={linkedin} target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faLinkedin} className="text-xl" />
-        </a>
+        </a>}
         <a href={github} target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faGithub} className="text-xl" />
         </a>
