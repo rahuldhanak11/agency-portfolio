@@ -48,8 +48,8 @@ export default function Home() {
           <span>&bull;</span>
           <span>Branding</span>
         </div>
-        <div className="absolute bottom-32 w-full flex justify-between px-10">
-          <p className="text-lg text-gray-700 max-w-md text-center">
+        <div className="absolute bottom-32 w-full flex justify-center px-10">
+          <p className="text-lg text-gray-700 max-w-xl text-center">
             We are a development agency specializing in building modern, robust, and scalable applications for businesses of all sizes.
           </p>
         </div>
@@ -59,7 +59,7 @@ export default function Home() {
           Deployed Projects
         </h2>
         <p className="text-lg text-center text-gray-600 mb-12">
-          Here are some of our latest projects we've successfully delivered.
+          Here are some of our latest projects we&apos;ve successfully delivered.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 px-10">
           <ProjectCard
