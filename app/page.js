@@ -115,7 +115,7 @@ export default function Home() {
             instagram="https://instagram.com/wsr_durgesh"
           />
           <TeamMemberCard
-            photo="/assets/Arya.png"
+            photo="/assets/profikelight.png"
             name="Arya Gami"
             roles={["Frontend Developer", "Flutter Developer", "UI/UX Designer", "Graphic Designer"]}
             linkedin="https://www.linkedin.com/in/"
