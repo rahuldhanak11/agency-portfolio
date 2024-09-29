@@ -1,8 +1,8 @@
 import Image from 'next/image';
 
-const ProjectCard = ({ imageSrc, title, subtitle }) => {
+const ProjectCard = ({ imageSrc, title, subtitle,url }) => {
   return (
-    <div>
+    <div onClick={() => window.open(url, '_blank')}>
     <div className="flex flex-col items-center p-6 bg-gray-100 rounded-lg shadow-lg transition-transform transform hover:scale-105">
       <Image
         src={imageSrc}

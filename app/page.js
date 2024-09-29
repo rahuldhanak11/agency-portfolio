@@ -66,11 +66,13 @@ export default function Home() {
             imageSrc="/assets/rsec.png" 
             title="Ricoche SEC"
             subtitle="Vulnerable Website, originally designed as a Cybersecurity Knowledge Platform "
+            url="https://ricoche-sec.vercel.app/"
           />
           <ProjectCard
             imageSrc="/assets/gg.png" 
             title="Gadget Galaxy"
             subtitle="Responsive and fully functional e-commerce website with Stripe Payment Gateway and Delivery Tracking"
+            url="https://gadget-galaxy-psi.vercel.app/"
           />
         </div>
       </section>
@@ -113,11 +115,11 @@ export default function Home() {
             instagram="https://instagram.com/wsr_durgesh"
           />
           <TeamMemberCard
-            photo="/assets/"
+            photo="/assets/Arya.png"
             name="Arya Gami"
             roles={["Frontend Developer", "Flutter Developer", "UI/UX Designer", "Graphic Designer"]}
             linkedin="https://www.linkedin.com/in/"
-            github="https://github.com/michaeljohnson"
+            github="https://github.com/aryagami27"
             instagram="https://www.instagram.com/arya_14_3"
           />
           <TeamMemberCard
