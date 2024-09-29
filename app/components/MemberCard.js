@@ -24,7 +24,7 @@ const TeamMemberCard = ({ photo, name, roles, linkedin, github, instagram }) => 
         </a>
       </div>
       <div className="relative">
-        <p className="text-gray-600 text-center mt-2">
+        <p className="text-gray-600 text-center mt-2 static">
           <Typewriter
             words={roles} 
             loop={true}

@@ -6,13 +6,14 @@ export default function Navbar() {
 
   return (
     <nav className="w-full bg-gray-100 shadow-md py-2 px-8 flex justify-between items-center">
-      <div className="text-2xl font-bold">RADIKLE</div>
+      <div className="text-2xl font-bold sm:hidden">RADIKLE</div>
 
       {/* Desktop Links */}
-      <div className="hidden md:flex space-x-8 text-lg font-medium text-gray-800">
-        <a href="#" className="hover:text-gray-600">Home</a>
-        <a href="#" className="hover:text-gray-600">Our Team</a>
-        <a href="#" className="hover:text-gray-600">Services</a>
+      <div className="hidden md:flex space-x-16 text-lg font-medium text-gray-800">
+        <a href="#home" className="hover:text-gray-600">Home</a>
+        <a href="#projects" className="hover:text-gray-600">Projects</a>
+        <a href="#services" className="hover:text-gray-600">Services</a>
+        <a href="#members" className="hover:text-gray-600">Our Team</a>
       </div>
 
       {/* Book a Call Button for PC View */}
