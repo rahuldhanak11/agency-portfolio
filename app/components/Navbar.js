@@ -6,7 +6,7 @@ export default function Navbar() {
 
   return (
     <nav className="w-full bg-gray-100 shadow-md py-2 px-8 flex justify-between items-center">
-      <div className="text-2xl font-bold hidden">RADIKLE</div>
+      <div className="text-2xl font-bold">RADIKLE</div>
 
       {/* Desktop Links */}
       <div className="hidden md:flex space-x-16 text-lg font-medium text-gray-800">
