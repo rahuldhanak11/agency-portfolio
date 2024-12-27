@@ -117,7 +117,8 @@ export default function Home() {
           <TeamMemberCard
             photo="/assets/profikelight.png"
             name="Arya Gami"
-            roles={["Frontend Developer", "Flutter Developer", "UI/UX Designer", "Graphic Designer"]}
+            roles={["Frontend Developer", "Flutter Developer", "UI/UX Designer", "Graphic Designer", 'Motion Designer','Video Editor']}
+            linkedin="https://www.linkedin.com/in/aryagami/"
             github="https://github.com/aryagami27"
             instagram="https://www.instagram.com/arya_14_3"
           />

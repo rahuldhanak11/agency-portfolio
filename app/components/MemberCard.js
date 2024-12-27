@@ -7,7 +7,7 @@ import { Typewriter } from 'react-simple-typewriter';
 const TeamMemberCard = ({ photo, name, roles, linkedin, github, instagram }) => {
   return (
     <motion.div
-      className="flex flex-col items-center p-6 bg-gray-100 rounded-lg shadow-lg hover:-translate-y-2 transition-all duration-300"
+      className="flex flex-col items-center py-6 bg-gray-100 rounded-lg shadow-lg hover:-translate-y-2 transition-all duration-300"
       transition={{ duration: 0.3 }}
     >
       <img src={photo} alt={name} className="w-32 h-32 rounded-full mb-4 object-cover" />
@@ -23,7 +23,7 @@ const TeamMemberCard = ({ photo, name, roles, linkedin, github, instagram }) => 
           <FontAwesomeIcon icon={faInstagram} className="text-xl" />
         </a>
       </div>
-      <div className="relative">
+      <div className="relative min-h-9">
         <p className="text-gray-600 text-center mt-2 static">
           <Typewriter
             words={roles} 
